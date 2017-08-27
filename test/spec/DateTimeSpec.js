@@ -26,7 +26,7 @@ describe("DateTime", function () {
   it("returns a NaN offset when an invalid date is passed in", function () {
     var invalidDates = [new Date(864e13 + 1), new Date(-1e99), new Date("xyz")];
     for(var i = 0; i < invalidDates.length; i++) {
-      expect(isNaN(invalidDates[i]).offset).toBe(true);
+      expect(isNaN(DateTime(invalidDates[i]).offset)).toBe(true);
     }
   });
 });
